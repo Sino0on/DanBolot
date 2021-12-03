@@ -1,21 +1,36 @@
 # Задание 1:
 # У вас есть идея создать Back-end для игры: "Угадай число."
 # Данный код генерирует рандомное число.
-###################
+# ###################
 # import random as rd
 # random_number = rd.randint(0,10)
 # print(random_number)
-###################
-# С помощью функции:
-#    my_number = int(input("Введите число: "))
-# спрашивайте число от пользователя.
-# Запустите бесконечный цикл!
-# И пытайтесь спрашивать у пользователя какое-то число каждый раз.
-# Если пользователь угадал число которое сгенерировал компьютер остановите цикл и скажите пользователю - "Вы угадали!"
-# Если пользователь не угадал вы снова спросите у него число.
-# Если пользователь 3 раза подряд не угадал число, вы останавливаете цикл и говорите: "Вы проиграли..."
-#######################################################################
+# ###################
+# # С помощью функции:
 
+# my_number = int(input("Введите число: "))
+
+# # спрашивайте число от пользователя.
+# # Запустите бесконечный цикл!
+# # И пытайтесь спрашивать у пользователя какое-то число каждый раз.
+# # Если пользователь угадал число которое сгенерировал компьютер остановите цикл и скажите пользователю - "Вы угадали!"
+# # Если пользователь не угадал вы снова спросите у него число.
+# # Если пользователь 3 раза подряд не угадал число, вы останавливаете цикл и говорите: "Вы проиграли..."
+# #######################################################################
+
+#  if guess < number:
+#         print ('Твое число меньше того, что я загадал.')
+
+#     if guess > number:
+#         print ('Твое число больше загаданного мной.')
+
+#     if guess == number:
+#         break
+
+# if guess == number:
+#     print ('Ух ты, {0}! Ты угадал мое число, использовав {1} попыток!'.format(guesses_made))
+# else:
+#     print ('А вот и не угадал! Я загадал число {0}'.format(number))
 
 
 # Задание 2:
@@ -32,6 +47,15 @@
 ###################################################################
 
 
+# text1=input('введите текст')
+# def stroka(work):
+#     if len(text1)>10:
+#         print('строка больше 10')
+#     else:
+#         b = 10 - len(text1)
+#         print(text1+(b*'*'))
+# stroka(text1)
+
 
 # Задание 4:
         # Напишите программу, которая запрашивает у пользователя шесть вещественных чисел. 
@@ -45,29 +69,29 @@
         # Напишите программу которая принимает число любой длины и вытаскивает из него самое большое и самое маленькое число.
 ####################################################################
 
-chislo = input()
-def max_and_min(*rgs):
-    asd = []
-    for i in chislo:
-        asd.append(int(i))
-    print(max(asd), min(asd))
+# chislo = input()
+# def max_and_min(*rgs):
+#     asd = []
+#     for i in chislo:
+#         asd.append(int(i))
+#     return max(asd), min(asd)
 
-max_and_min()
+# print(max_and_min())
 
-# text = """
-# Simple is better than complex.Complex is better than complicated.
-# Flat is better than nested.Sparse is better than dense.
-# Readability counts.Special cases aren't special enough to break the rules.Although practicality beats purity.
-# Errors should never pass silently.Unless explicitly silenced.
-# In the face of ambiguity, refuse the temptation to guess.
-# There should be one--and preferably only one --obvious way to do it.
-# Although that way may not be obvious at first unless you're Dutch.
-# Now is better than never.
-# Although never is often better than *right* now.
-# If the implementation is hard to explain, it's a bad idea.
-# If the implementation is easy to explain, it may be a good idea.
-# Namespaces are one honking great idea --let's do more of those!
-# """
+text = """
+Simple is better than complex.Complex is better than complicated.
+Flat is better than nested.Sparse is better than dense.
+Readability counts.Special cases aren't special enough to break the rules.Although practicality beats purity.
+Errors should never pass silently.Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one--and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea --let's do more of those!
+"""
 ################################################################
 
 
@@ -80,6 +104,17 @@ max_and_min()
 #     Подсказка: используйте метод строчных значений, который проверяет, “заглавность” буквы.
 ##################################################################
 
+# def stroka_upper(text):
+#     a = []
+#     text = text.replace('.', ' ')
+#     textsplit = text.split()
+
+#     for i in textsplit:
+#         if i[0].isupper():
+#             a.append(i)
+#     return a
+# print(stroka_upper(text))
+
 
 
 
@@ -91,14 +126,38 @@ max_and_min()
 #     Подсказка: используйте метод строчных значений, который проверяет, начинается ли слово на переданную букву.
 ####################################################################
 
+# def words_with_c():
+#     with open('text.txt', 'r') as text:
+#         c = []
+#         a = text.read()
+#         a = a.replace('.', ' ')
+#         a = a.split()
+#         for i in a:
+#             if i[0] == 'c' or i[0] == 'C':
+#                 c.append(i)
+#     return c
+# print(words_with_c())
+
 
 
 
 # Задание 8:
 #     Банкомат
-#     Напишите код банкомата, который принимает цифру, выдает деньги с номиналом 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 5, 3, 1.
+#     Напишите код банкомата, который принимает цифру, выдает деньги 
+#     с номиналом 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 5, 3, 1.
 #     Подсказка: напишите функцию, используйте divmod()
 ##################################################################
+# def bankomat(pin,*args,**kwargs):
+#     allow=1234
+#     if pin ==allow:
+#         return 15000
+#     if args:
+#         kwargs['name']
+#         return sum(args),kwargs
+#     else:
+#         return 'не правильный пинкод'
+# print(bankomat(5000,2000,1000,500,200,100,50,20,10,5,3,1,name='Bolot'))
+# print(bankomat(5000,2000,1000,500,200,100,50,20,10,5,3,1,name='Dastan'))
 
 
 
@@ -125,19 +184,49 @@ max_and_min()
 #     Функция, которая будет передана в filter() должна возвращать True, если в слове есть буква ‘p’.
 #####################################################################
 
+# def do_filter():
+#     a = []
+#     text.replace('\n', ' ')
+#     text.replace('.', ' ')
+#     text.split()
+
+#     for i in text:
+#         if 'p' in text:
+#             return True, text
+
+# def filter():
+#     do_filter()
+#     a = []
+#     if do_filter == True:
+#         for i in text:
+
+#             if 'p' in i:
+#                 a.append(i)
+#         return a
+
+# print(filter())
+
+
 
 
 
 # Задание 11:
 #     Дано
-    # dict_one = {'a':1, 'b':2, 'c':3}
-    # dict_two = {'d':4, 'e':5, 'f':6}
-    # dict_three = {'g':7, 'h':8, 'i':9}
-    # dict_four = {}
-#     С помощью цикла for необходимо собрать три первых словаря в словарь dict_four
+# dict_one = {'a':1, 'b':2, 'c':3}
+# dict_two = {'d':4, 'e':5, 'f':6}
+# dict_three = {'g':7, 'h':8, 'i':9}
+# dict_four = {}
+# # #     С помощью цикла for необходимо собрать три первых словаря в словарь dict_four
 
-#     Подсказка: Для удобства итерации, первые три словаря можно записать в кортеж (dict_one, dict_two, dict_three
-#####################################################################
+# # #     Подсказка: Для удобства итерации, первые три словаря можно записать в кортеж (dict_one, dict_two, dict_three
+# # #####################################################################
+
+# def dict_first():
+#     a = [dict_one, dict_two, dict_three]
+#     for i in a:
+#         dict_four.update(i[0])
+#     return dict_four
+# print(dict_first())
 
 
 
@@ -155,36 +244,113 @@ max_and_min()
 #     [3, 4, 5, 1, 2]
 #####################################################################
 
+# a = input()
+# b = int(input())
+# def cezar(a, b):
+#     a.split(' ')
+#     if b > 0:
+#         c = a[0:b+1]
+#         d = a[b+1:len(a)]
+#         a = d + c
+#         return a
+#     elif b < 0:
+#         c = a[b+1:len(a)]
+#         d = a[0:b+1]
+#         a = d + c
+#         return a
+# print(cezar(a, b))
+
+# a = [1,2,3,4]    
+# c = a[0:2]
+# d = a[2:len(a)]
+# a = d + c
+# print(a)
 
 
 
 
-# Задание 13:
+
+
+# Задание 13: done
 #     Напишите программу, где исходный список содержит положительные и отрицательные числа. 
 #     Требуется положительные поместить в один список, а отрицательные - в другой.
 ###################################################################
 
 
+# def spisok(list1):
+#     pol = []
+#     otr = []
+#     for i in list1:
+#         if i >= 0:
+#             pol.append(i)
+#         else:
+#             otr.append(i)
+#     return pol, otr
+# a = int(input())
+# list1 = []
+# for i in range(a):
+#     f = int(input())
+#     list1.append(f)
+
+# print(spisok(list1))
 
 
-# Задание 14:
-#     Написать функцию season, принимающую 1 аргумент — номер месяца (от 1 до 12), и возвращающую время года, которому этот месяц принадлежит (зима, весна, лето или осень).
+
+# Задание 14: done
+#     Написать функцию season, принимающую 1 аргумент — номер месяца (от 1 до 12),
+#     и возвращающую время года, которому этот месяц принадлежит (зима, весна, лето или осень).
 #####################################################################
 
+# month = int(input())
+# def season(month):
+#     if month == 12 or month == 1 or month == 2:
+#         return 'winter'
+#     elif 2 < month < 6:
+#         return 'spring'
+#     elif 5< month < 9:
+#         return 'summer'
+#     elif 8< month < 12:
+#         return 'autumn'
+# print(season(month))
 
+# Задание 15:   done
 
-
-# Задание 15:
-
-#     Пользователь делает вклад в размере a рублей сроком на years лет под 10% годовых (каждый год размер его вклада увеличивается на 10%. Эти деньги прибавляются к сумме вклада, и на них в следующем году тоже будут проценты).
-#     Написать функцию bank, принимающая аргументы a и years, и возвращающую сумму, которая будет на счету пользователя.
+#     Пользователь делает вклад в размере a рублей сроком на years лет под 10% годовых 
+#     (каждый год размер его вклада увеличивается на 10%. Эти деньги прибавляются к сумме вклада,
+#     и на них в следующем году тоже будут проценты).
+#     Написать функцию bank, принимающая аргументы a и years, и возвращающую сумму,
+#     которая будет на счету пользователя.
 #####################################################################
 
+# a = int(input())
+# years = int(input())
+# def bank(a, years):
+#     summ = a
+#     for i in range(years):
+#         summ += (a * 0.1)
+#     return summ
+# print(bank(a, years))
 
 
 
 
-# Задание 16:
-#     Несколько дней подряд метеоролог измеряет температуру воздуха в своём городе. Ваша программа считывает измеренные им значения и выводит среднее значение температуры за время измерений. Чтобы обозначить конец ввода данных, вводится значение, меньшее -300 (реальная температура не может быть ниже -273.15).
-#     При проведении вычислений с действительными числами ответ может незначительно отличаться от математически правильного из-за погрешностей округления; это не повлияет на проверку решения.
+
+# Задание 16: no done
+#     Несколько дней подряд метеоролог измеряет температуру воздуха в своём городе.
+#     Ваша программа считывает измеренные им значения и выводит среднее значение температуры за время измерений. 
+#     Чтобы обозначить конец ввода данных, вводится значение, меньшее -300 (реальная температура не может быть 
+#     ниже -273.15).
+#     При проведении вычислений с действительными числами ответ может незначительно отличаться от математически
+#     правильного из-за погрешностей округления; это не повлияет на проверку решения.
 ########################################################################
+
+
+
+# a = 0
+# days = -1
+# summ = 0
+# while a > -300:
+#    summ += a
+#    days += 1
+#    a = float(input('Температуру воздуха '))
+# print(summ / days)
